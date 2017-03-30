@@ -1,5 +1,5 @@
 class Movie < ApplicationRecord
-  has_many :roles, dependent: :destroy#, inverse_of: :actor, foreign_key: :actor_id
+  has_many :roles, dependent: :destroy#, inverse_of: :actor, foreign_key: :actor_id (this commented code breaks it but it should be implemnted in the future)
   has_many :actors, -> { distinct }, through: :roles
 
   validates_presence_of :title, :genre, :rating
