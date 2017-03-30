@@ -1,2 +1,20 @@
-<%= link_to "Movies", movies_path %>
-<%= link_to "Actors", actors_path %>
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="https://www.skipio.com/freesignup3/?utm_source=MaxConnect&utm_medium=PaidSearch&utm_content=Skipio&utm_term=skipio&utm_campaign=MaxConnect_SelfBranded&offer_id=2&aff_id=1000&aff_sub=MaxConnect_PaidSearch">
+    <%= image_tag "Unknown.png", width: 30, height: 30, class: "d-inline-block align-top" %>
+    Skipio Movie Database
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "Movies", movies_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Actors", actors_path, class: "nav-link" %>
+      </li>
+    </ul>
+  </div>
+</nav>
