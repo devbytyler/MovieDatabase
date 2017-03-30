@@ -2,10 +2,6 @@
 <%= @actor.name %>
 </h1>
 
-<hr>
-<h4>Movies with <%= @actor.name %></h4>
-<% @actor.movies.each do |movie| %>
-<p>
-  <%= link_to movie.title, movie %>
-</p>
-<% end %>
+
+
+<%= render 'shared/roles_played' if @actor.movies.count > 0 %>
