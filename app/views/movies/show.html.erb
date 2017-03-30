@@ -23,10 +23,4 @@
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>
 
-<hr>
-<h4>Actors in this Film</h4>
-<% @movie.actors.each do |actor| %>
-<p>
-  <%= link_to actor.name, actor %>
-</p>
-<% end %>
+<%= render 'shared/cast_members' if @movie.actors.count > 0 %>
