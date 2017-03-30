@@ -1,7 +1,0 @@
-<hr>
-<h4>Movies with <%= @actor.name %></h4>
-<% @actor.movies.each do |movie| %>
-<p>
-  <%= link_to movie.title, movie %>
-</p>
-<% end %>
