@@ -26,7 +26,15 @@
     <%= f.text_field :rating %>
   </div>
 
-
+  <h4>Actors in this Film</h4>
+  <fieldset id="movie-actors">
+    <ol>
+      <%= f.fields_for :roles do |role| %>
+      <%= render 'role_fields', f: role %>
+      <% end %>
+    </ol>
+    <%= link_to_add_association 'Add an actor', f, :roles, 'data-association-insertion-node' => "#movie-actors ol", 'data-association-insertion-method' => "append", :wrap_object => Proc.new {|role| role.build_actor; role } %>
+  </fieldset>
 
   <div class="actions">
     <%= f.submit %>
