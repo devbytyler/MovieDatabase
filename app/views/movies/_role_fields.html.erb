@@ -1,0 +1,7 @@
+<div class="nested-fields">
+  <%= f.fields_for :actor do |role_actor| %>
+  <%= role_actor.label :name, "Name:" %>
+  <%= role_actor.text_field :name %>
+  <% end %>
+<%= link_to_remove_association "remove", f %><br />
+</div>
